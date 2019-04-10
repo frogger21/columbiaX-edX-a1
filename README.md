@@ -16,4 +16,11 @@ MAP looks for the set of weights that arg max ln(w|y,X) while MLE looks for the 
 that arg max ln(y|mu=Xw,sigma^2).
 
 Lasso regressions are motiviated similarly to the ridge regression except that it adds a
-lambda*||w|| term. While ridge penalizes Lasso 
+lambda*||w|| term. While ridge penalizes high magnitude weights with priority, Lasso does not
+care if the weights are small or big, they will equally get penalized. Lasso is useful if the number
+of features of X are greater than the observations of the data (can't run OLS/MLE). Lasso will drive certain 
+weights to 0.
+
+
+
+
